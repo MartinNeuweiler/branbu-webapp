@@ -737,6 +737,86 @@ textarea,
   font-family: 'League Spartan', sans-serif;
 }
 
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .lang-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    gap: 0.5rem;
+    z-index: 1000;
+  }
+
+  .lang-toggle button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+    min-height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero .logo {
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .grid-item {
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .grid-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid-item p {
+    font-size: 1rem;
+  }
+
+  button,
+  .button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 375px) {
+  .hero p {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+
+  .lang-toggle button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
 
 
 

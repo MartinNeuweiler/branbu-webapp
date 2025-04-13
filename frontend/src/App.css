@@ -1,0 +1,745 @@
+/* Global Styles */
+:root {
+  /* Color System */
+  --color-primary: #f5e0c3;
+  --color-primary-dark: #d7c3a1;
+  --color-text: #1e293b;
+  --color-text-light: #64748b;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-hover: #f1f5f9;
+  --color-success: #059669;
+  --color-error: #dc2626;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+  font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 4rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.hero .survey-text {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero .logo {
+  width: 600px;
+  height: auto;
+  margin-bottom: 2.5rem;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sponsorship Section (Why Choose Branbu?) */
+.sponsorship {
+  padding: 4rem 2rem;
+  background: var(--color-surface);
+}
+
+.sponsorship h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid-item {
+  background: var(--color-background);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 300px;
+  justify-content: center;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.grid-item h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.75rem;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  line-height: 1.3;
+}
+
+.grid-item p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+  max-width: 95%;
+}
+
+/* Button Styles */
+button,
+.button {
+  padding: 1.5rem 4rem;
+  background: linear-gradient(135deg, #fdf6ec, #f8eadb);
+  color: var(--color-text);
+  border: 1px solid rgba(215, 195, 161, 0.3);
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  font-family: 'League Spartan', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+button:hover,
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #f8eadb, #fdf6ec);
+  border-color: rgba(215, 195, 161, 0.5);
+}
+
+/* Primary Button */
+button.primary,
+.button.primary,
+#openModal,
+.feedback .button,
+button[type="submit"] {
+  background: linear-gradient(135deg, #fdf6ec, #f8eadb);
+  color: var(--color-text);
+  border: 1px solid rgba(215, 195, 161, 0.3);
+  font-weight: 700;
+  padding: 1.75rem 4.5rem;
+  font-size: 1.7rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Language Toggle - Top Right */
+.lang-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.lang-toggle button {
+  background: linear-gradient(135deg, #fdf6ec, #f8eadb);
+  border: 1px solid rgba(215, 195, 161, 0.3);
+  color: var(--color-text);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.lang-toggle button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #f8eadb, #fdf6ec);
+  border-color: rgba(215, 195, 161, 0.5);
+}
+
+/* Login Button - Top Left */
+.login-toggle {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+}
+
+.login-toggle button {
+  background: linear-gradient(135deg, #fdf6ec, #f8eadb);
+  border: 1px solid rgba(215, 195, 161, 0.3);
+  color: var(--color-text);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.login-toggle button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #f8eadb, #fdf6ec);
+  border-color: rgba(215, 195, 161, 0.5);
+}
+
+/* Feedback Section (Survey) */
+.feedback {
+  background: var(--color-surface);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.feedback h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.feedback p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+/* Success Modal Buttons */
+.success-content button {
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-text);
+  border: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.success-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, var(--color-primary-dark), var(--color-primary));
+}
+
+/* Role Selection */
+.role-selection {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.role-selection label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--color-surface);
+}
+
+.role-selection label:hover {
+  background: var(--color-hover);
+  transform: translateY(-1px);
+}
+
+.role-selection input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--color-surface);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text-light);
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+/* Form Styles */
+input, select, textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.875rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: var(--color-surface);
+  box-shadow: 0 0 0 3px rgba(215, 195, 161, 0.1);
+}
+
+/* Toggle Links */
+p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+p span {
+  color: #5d4037;
+  cursor: pointer;
+}
+
+/* Creator Dashboard Styling */
+.dashboard {
+  padding: 40px;
+  text-align: center;
+  background: var(--color-background);
+}
+
+.dashboard h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.dashboard-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: var(--color-surface);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.dashboard-tabs button {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  min-width: 140px;
+}
+
+.dashboard-tabs button:hover {
+  background: var(--color-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-tabs button.active {
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+  border: none;
+  color: var(--color-text);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand Dashboard Styling */
+.brand-dashboard .dashboard-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: var(--color-surface);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.brand-dashboard .dashboard-tabs button {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  min-width: 140px;
+}
+
+.brand-dashboard .dashboard-tabs button:hover {
+  background: var(--color-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brand-dashboard .dashboard-tabs button.active {
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+  border: none;
+  color: var(--color-text);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brand-dashboard .campaign-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-text);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  margin-top: 40px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brand-dashboard .campaign-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, var(--color-primary-dark), var(--color-primary));
+}
+
+/* Success Modal */
+.success-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-content {
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border);
+}
+
+.success-content p {
+  margin-bottom: 1.5rem;
+  color: var(--color-success);
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid-container {
+    max-width: 900px;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .grid-item {
+    padding: 2.5rem;
+    min-height: 280px;
+  }
+
+  .grid-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid-item p {
+    font-size: 1.2rem;
+    max-width: 95%;
+  }
+
+  .hero .logo {
+    width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsorship {
+    padding: 4rem 1rem;
+  }
+
+  .sponsorship h2 {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 600px;
+    padding: 0 1.5rem;
+  }
+
+  .grid-item {
+    min-height: auto;
+    padding: 2.5rem;
+  }
+
+  .grid-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .grid-item p {
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  .dashboard-tabs,
+  .brand-dashboard .dashboard-tabs {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .dashboard-tabs button,
+  .brand-dashboard .dashboard-tabs button {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .hero .logo {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .hero p {
+    font-size: 1.6rem;
+  }
+
+  .button {
+    padding: 1.25rem 3rem;
+    font-size: 1.4rem;
+  }
+}
+
+/* Role Selection Enhancement */
+.role-selection label div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.role-selection label strong {
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.role-selection label span {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* Form Toggle */
+.toggle-form {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
+
+.toggle-form span {
+  color: var(--color-text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.toggle-form span:hover {
+  color: var(--color-primary-dark);
+}
+
+.toggle-form span:focus {
+  outline: none;
+  text-decoration-color: var(--color-primary-dark);
+}
+
+/* Form Groups */
+.modal .form-group {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.modal .form-group input:focus {
+  transform: translateY(-1px);
+}
+
+.modal .form-group input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.8;
+}
+
+/* Error Message Enhancement */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message::before {
+  content: '⚠️';
+  font-size: 1rem;
+}
+
+/* Success Message Enhancement */
+.success-content::before {
+  content: '🎉';
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Loading State Enhancement */
+.modal button[type="submit"].loading::before {
+  opacity: 0;
+}
+
+/* Mobile Enhancements */
+@media (max-width: 768px) {
+  .role-selection label div {
+    font-size: 0.9rem;
+  }
+  
+  .role-selection label span {
+    font-size: 0.8rem;
+  }
+  
+  .toggle-form {
+    font-size: 0.9rem;
+  }
+}
+
+/* Update all other text elements to use League Spartan */
+.sponsorship h2,
+.grid-item h3,
+.grid-item p,
+button,
+.button,
+.feedback h2,
+.feedback p,
+.modal h3,
+input,
+select,
+textarea,
+.role-selection label {
+  font-family: 'League Spartan', sans-serif;
+}
+
+
+
+
+
+
+

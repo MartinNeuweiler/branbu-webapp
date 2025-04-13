@@ -1,0 +1,190 @@
+.marketplace {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--color-background);
+}
+
+.marketplace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: var(--color-surface);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--color-border);
+}
+
+.marketplace-header h1 {
+  font-size: 2.75rem;
+  color: var(--color-text);
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.search-bar input {
+  padding: 1rem 1.25rem;
+  width: 300px;
+  border: 1px solid var(--color-border);
+  border-radius: 0.875rem;
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: var(--color-surface);
+  box-shadow: 0 0 0 3px rgba(215, 195, 161, 0.1);
+}
+
+.marketplace-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--color-surface);
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--color-border);
+}
+
+.marketplace-filters select {
+  padding: 0.875rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.marketplace-filters select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: var(--color-surface);
+  box-shadow: 0 0 0 3px rgba(215, 195, 161, 0.1);
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+.opportunity-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.opportunity-card h3 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 600;
+}
+
+.brand-name {
+  color: var(--color-text-light);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.budget {
+  color: var(--color-success);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background: var(--color-background);
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: var(--color-hover);
+  transform: translateY(-1px);
+}
+
+.apply-button {
+  width: 100%;
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-text);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.apply-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, var(--color-primary-dark), var(--color-primary));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .marketplace {
+    padding: 1rem;
+  }
+
+  .marketplace-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .marketplace-header h1 {
+    font-size: 2rem;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .marketplace-filters {
+    flex-wrap: wrap;
+  }
+
+  .marketplace-filters select {
+    width: 100%;
+  }
+} 

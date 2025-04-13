@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+// eslint-disable-next-line
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 
 const BrandDashboard = () => {
+  // eslint-disable-next-line
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('opportunities');
+  // eslint-disable-next-line
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [stats, setStats] = useState({
     activeListings: 0,
@@ -199,25 +202,14 @@ const BrandDashboard = () => {
               <div className="opportunity-card">
                 <h3 className="card-title">Summer Collection Launch</h3>
                 <p className="card-subtitle">Active Campaign</p>
-                <p className="card-content">Seeking fitness influencers for summer collection promotion...</p>
+                <p className="card-content">Looking for lifestyle influencers...</p>
                 <div className="card-stats">
                   <span>Applications: 12</span>
-                  <span>Budget: $5,000</span>
+                  <span>Views: 245</span>
                 </div>
-                <button className="primary-button">View Details</button>
-              </div>
-              <div className="opportunity-card">
-                <h3 className="card-title">Holiday Special</h3>
-                <p className="card-subtitle">Draft</p>
-                <p className="card-content">Planning holiday season promotional campaign...</p>
-                <div className="card-stats">
-                  <span>Applications: 0</span>
-                  <span>Budget: $8,000</span>
-                </div>
-                <button className="primary-button">Edit Campaign</button>
+                <button className="secondary-button">View Details</button>
               </div>
             </div>
-            <button className="primary-button" style={{ marginTop: '2rem' }}>Create New Campaign</button>
           </div>
         )}
 

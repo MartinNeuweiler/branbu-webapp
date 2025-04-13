@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: branbu-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: DATABASE_URL
+        sync: false # Will be set manually in Render dashboard
+      - key: DATABASE_SSL
+        value: true
+      - key: JWT_SECRET
+        sync: false # Will be set manually in Render dashboard
+      - key: JWT_EXPIRATION
+        value: 24h
+      - key: REFRESH_TOKEN_SECRET
+        sync: false # Will be set manually in Render dashboard
+      - key: REFRESH_TOKEN_EXPIRATION
+        value: 7d
+      - key: CORS_ORIGIN
+        sync: false # Will be set to Netlify URL later
+      - key: LOG_LEVEL
+        value: info
+      - key: LOG_FORMAT
+        value: combined 

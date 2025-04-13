@@ -6,7 +6,7 @@ function LandingPage() {
 
   const translations = {
     ENG: {
-      heroText: "The ultimate platform for content creators and brands to connect, collaborate, and secure sponsorship deals – without middlemen.",
+      heroText: "We connect creators and brands with a shop-like experience to close authentic brand-deals - no agencies, just perfect matches.",
       whyChoose: "Why Choose Branbu?",
       feedback: "We value your feedback!",
       surveyText: "Help us create the best experience for creatives like you! Participate in our short survey.",
@@ -32,7 +32,7 @@ function LandingPage() {
       ]
     },
     DE: {
-      heroText: "Die ultimative Plattform für Content-Ersteller und Marken, um sich zu verbinden, zusammenzuarbeiten und Sponsoring-Deals abzuschließen – ganz ohne Middle-Men.",
+      heroText: "Wir verbinden Creators und Marken mit einem Shop-ähnlichen Erlebnis für authentische Brand-Deals - keine Agenturen, nur perfekte Matches.",
       whyChoose: "Warum Branbu wählen?",
       feedback: "Wir schätzen dein Feedback!",
       surveyText: "Hilf uns, die beste Erfahrung für Kreative wie dich zu schaffen! Nimm an unserer Umfrage teil.",

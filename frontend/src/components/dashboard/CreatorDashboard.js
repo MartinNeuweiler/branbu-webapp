@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // eslint-disable-next-line
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
@@ -8,55 +8,6 @@ const CreatorDashboard = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('opportunities');
   const [showEditProfile, setShowEditProfile] = useState(false);
-  const [profileData, setProfileData] = useState({
-    name: '',
-    email: '',
-    bio: '',
-    socialMedia: {
-      instagram: '',
-      youtube: '',
-      tiktok: '',
-      twitter: ''
-    },
-    categories: [],
-    languages: [],
-    location: ''
-  });
-  // eslint-disable-next-line
-  const [stats, setStats] = useState({
-    activeProjects: 0,
-    totalEarnings: 0,
-    profileViews: 0
-  });
-
-  useEffect(() => {
-    // Fetch user's actual stats from the backend
-    const fetchUserStats = async () => {
-      try {
-        const userData = JSON.parse(sessionStorage.getItem('user'));
-        if (!userData) return;
-
-        const response = await fetch(`http://localhost:5000/api/users/${userData.id}/stats`, {
-          headers: {
-            'Authorization': `Bearer ${userData.token}`
-          }
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-          setStats({
-            activeProjects: data.activeProjects || 0,
-            totalEarnings: data.totalEarnings || 0,
-            profileViews: data.profileViews || 0
-          });
-        }
-      } catch (error) {
-        console.error('Error fetching user stats:', error);
-      }
-    };
-
-    fetchUserStats();
-  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('token');

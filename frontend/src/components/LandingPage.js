@@ -10,7 +10,7 @@ function LandingPage() {
       whyChoose: "Why Choose Branbu?",
       feedback: "We value your feedback!",
       surveyText: "Help us create the best experience for creatives like you! Participate in our short survey.",
-      takeSurvey: "Take the Survey",
+      takeSurvey: "Take the Survey and Register to get the Early Beta Access",
       surveyLink: "https://form.typeform.com/to/LhUBnVCr",
       gridItems: [
         {
@@ -36,7 +36,7 @@ function LandingPage() {
       whyChoose: "Warum Branbu wählen?",
       feedback: "Wir schätzen dein Feedback!",
       surveyText: "Hilf uns, die beste Erfahrung für Kreative wie dich zu schaffen! Nimm an unserer Umfrage teil.",
-      takeSurvey: "Nimm an der Umfrage teil",
+      takeSurvey: "Nimm an der Umfrage teil und registriere dich für den Early Beta Zugang",
       surveyLink: "https://form.typeform.com/to/T6WYIOQ9",
       gridItems: [
         {
